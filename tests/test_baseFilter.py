@@ -5,16 +5,24 @@
 # @Site    : ${SITE}
 # @File    : test_baseFilter.py
 from unittest import TestCase
-from miaodump.controller.filter import BaseFilter
+from miaodump.controller.filter import FileFilter
 
 
 # @Software: PyCharm
 class TestBaseFilter(TestCase):
 
     def test_hmpchFilter(self):
-        f = BaseFilter()
-        print f.hmpchFilter("/Users/ch4r0n/Desktop/Rx_Swift_Leaning/MytestApp")
+        f = FileFilter()
+        print f.hmmFilter("/Users/ch4r0n/Desktop/Rx_Swift_Leaning/MytestApp")
         pass
 
     def test_clsnameFilter(self):
         pass
+
+    def test_sdkFilter(self):
+        f = FileFilter()
+        orig_list  = ['AAA','BBB','CCC']
+        white_list = ['AAA', '123123k']
+        print f.sdkFilter(orig_list, white_list)
+
+

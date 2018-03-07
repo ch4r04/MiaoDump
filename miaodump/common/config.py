@@ -5,22 +5,30 @@
 # @Site    : 
 # @File    : config.py
 # @Software: PyCharm
+import datetime
 
-HEADER_BANNER = '''
-                       _      __                     _
-  ___   ___       ___ | |__  / _|_   _ ___  ___ __ _| |_ ___  _ __
- / _ \ / __|____ / _ \| '_ \| |_| | | / __|/ __/ _` | __/ _ \| '__|
-| (_) | (_|_____| (_) | |_) |  _| |_| \__ \ (_| (_| | || (_) | |
- \___/ \___|     \___/|_.__/|_|  \__,_|___/\___\__,_|\__\___/|_|
+HEADER_BANNER = '''// __  __ _             ____
+//|  \/  (_) __ _  ___ |  _ \ _   _ _ __ ___  _ __
+//| |\/| | |/ _` |/ _ \| | | | | | | '_ ` _ \| '_ \\
+//| |  | | | (_| | (_) | |_| | |_| | | | | | | |_) |
+//|_|  |_|_|\__,_|\___/|____/ \__,_|_| |_| |_| .__/
+//                                           |_|
+//
+//                                                    by ch4r0n
+//[1] Make sure reskey.txt is under the current directory.
+//[2] Input your project name.
+//[3] Input salt value, Only letters are allowed.
+//[4] If successful, an encrypted key-value is output, good luck..
+//                                            %s
+//-----------------------------------------------------------------
+#ifndef MIAODUMP_Header
+#define MIAODUMP_Header
+''' %(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
-                                                    by ch4r0n
-[1] Make sure reskey.txt is under the current directory.
-[2] Input your project name.
-[3] Input salt value, Only letters are allowed.
-[4] If successful, an encrypted key-value is output, good luck..
-
------------------------------------------------------------------
+HEADER_TAIL = '''
+#endif
 '''
+
 #系统白名单 需要从文件读取
 WHITE_LIST = []
 #定义第三方SDK列表
@@ -30,3 +38,4 @@ SYSTEM_LIST = ['main.m','Main.storyboard','LaunchScreen.xib','LaunchScreen.story
 FILE_NAME = ['main','Main','LaunchScreen']
 RES_KEY_PATH = 'reskeys.txt'
 #需要加的前缀盐 (字母)
+SALT_KEY = 'A'

@@ -13,8 +13,13 @@ class FileRw:
 
     def __init__(self):
         pass
-    # 从文件中逐行读取到列表
+
     def readTxtToList(self,r_path):
+        '''
+        从txt文件逐行读取到list中
+        :param r_path:
+        :return:
+        '''
         tmplist = []
         try:
             with open(r_path, 'r') as fp:
@@ -25,8 +30,13 @@ class FileRw:
             print e
             return tmplist
 
-    # 内容写入文件操作
     def writeContextToFile(self,context, filepath):
+        '''
+        将内容写入文件
+        :param context:
+        :param filepath:
+        :return:
+        '''
         try:
             fwrite = open(filepath, 'w')
             fwrite.write(context)
@@ -35,9 +45,12 @@ class FileRw:
             return False
         fwrite.close()
 
-    # 从文件读取内容操作
-    # 返回值:文件内容串
     def readContextFromFile(self,filepath):
+        '''
+        从文件读取内容
+        :param filepath:
+        :return:
+        '''
         try:
             fread = open(filepath, 'r')
         except Exception, e:
@@ -47,9 +60,20 @@ class FileRw:
         fread.close()
         return tmpstr
 
-
-
-
-
+    def writeDictToHeaderFile(self, orig_dict, output_path):
+        '''
+        将字典键值对输出到一个header.h文件中
+        :param orig_dict:
+        :param output_path:
+        :return:
+        '''
+        with open(output_path, 'w+') as fwrite:
+            ctx_headers = config.HEADER_BANNER
+            for (k,v) in orig_dict.iteritems():
+                line_str = "#define %s %s" % (k, v)
+                ctx_headers = ctx_headers + line_str
+            ctx_headers = ctx_headers + config.HEADER_TAIL
+            fwrite.write(ctx_headers)
+        
 
 
