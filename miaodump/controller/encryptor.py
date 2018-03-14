@@ -26,7 +26,6 @@ class Encryptor:
             orxst = ""
             for i in range(0, len(k)):
                 rst = ord(k[i]) ^ ord(config.SALT_KEY)
-                print(rst)
                 orxst = orxst + chr(rst)
             tempv.update(orxst)
             v = tempv.hexdigest()

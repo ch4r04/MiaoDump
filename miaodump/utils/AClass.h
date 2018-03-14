@@ -14,4 +14,7 @@
 
 @interface BClass : NSObject
 
+
+- (void)viewDidLoad;
+
 @end

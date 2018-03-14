@@ -8,6 +8,7 @@
 
 from ..common import config
 import re
+import os
 
 class FileRw:
 
@@ -67,13 +68,14 @@ class FileRw:
         :param output_path:
         :return:
         '''
-        with open(output_path, 'w+') as fwrite:
+        with open(os.path.join(output_path, config.HEADER_NAME), 'w+') as fwrite:
             ctx_headers = config.HEADER_BANNER
             for (k,v) in orig_dict.iteritems():
-                line_str = "#define %s %s" % (k, v)
+                line_str = "#define %s %s\n" % (k, v)
                 ctx_headers = ctx_headers + line_str
             ctx_headers = ctx_headers + config.HEADER_TAIL
             fwrite.write(ctx_headers)
+
         
 
 

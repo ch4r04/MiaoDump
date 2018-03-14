@@ -7,6 +7,8 @@
 # @Software: PyCharm
 import datetime
 
+HEADER_NAME = "miaodump_header.h"
+
 HEADER_BANNER = '''// __  __ _             ____
 //|  \/  (_) __ _  ___ |  _ \ _   _ _ __ ___  _ __
 //| |\/| | |/ _` |/ _ \| | | | | | | '_ ` _ \| '_ \\
@@ -32,10 +34,10 @@ HEADER_TAIL = '''
 #系统白名单 需要从文件读取
 WHITE_LIST = []
 #定义第三方SDK列表
-SDK_LIST = ["XGPush","XGSetting","UMSocial","ShareSDK","MJRefresh","Masonry","AFNet","MJExtension","HUPhotoBrowser","MBProgressHUD","FMDB","WMPageController","BlocksKit","LPPopup","Pods","SDWebImage","BaiduMap","CocoaSecurity"]
-#定义系统的主要函数列表 必须填.m
-SYSTEM_LIST = ['main.m','Main.storyboard','LaunchScreen.xib','LaunchScreen.storyboard']
-FILE_NAME = ['main','Main','LaunchScreen']
-RES_KEY_PATH = 'reskeys.txt'
+SDK_LIST = ["Pod","XGPush","XGSetting","UMSocial","ShareSDK","MJRefresh","Masonry","AFNet","MJExtension","HUPhotoBrowser","MBProgressHUD","FMDB","WMPageController","BlocksKit","LPPopup","Pods","SDWebImage","BaiduMap","CocoaSecurity"]
+RES_KEY_PATH = '../utils/reskeys.txt'
 #需要加的前缀盐 (字母)
 SALT_KEY = 'A'
+
+
+

@@ -12,9 +12,9 @@ from miaodump.controller.filter import RegexFilter
 class TestRegexFilter(TestCase):
     def test_getClsNameFromFilePath(self):
         fa = RegexFilter()
-        print fa.getClsNameFromFilePath("/Users/ch4r0n/PycharmProjects/MiaoDump/miaodump/utils/AClass.h")
+        print fa.getClsNameFromFilePath("/Users/ch4r0n/Desktop/header.txt")
 
     def test_getMethodNameFromFilePath(self):
         fa = RegexFilter()
-        print fa.getFuncNameFromFilePath("/Users/ch4r0n/PycharmProjects/MiaoDump/miaodump/utils/ViewController.m")
+        print fa.getFuncNameFromFilePath("/Users/ch4r0n/Desktop/header.txt")
 
