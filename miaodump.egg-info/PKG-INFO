@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: miaodump
+Version: 0.1.0
+Summary: A tool what used to export encrypted header files
+Home-page: https://github.com/ch4r04/MiaoDump.git
+Author: ch4r0n
+Author-email: xingrenchan@gmail.com
+License: MIT
+Description: This script is just for exporting header files(encrypted).Security is not now, and will never be based purely on Obscurity.You can delete if you don't need the defines.There may be some bugs, good luck.
+Keywords: miaodump
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7

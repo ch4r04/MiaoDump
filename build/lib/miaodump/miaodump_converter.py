@@ -32,7 +32,7 @@ class MiaodumpConverter:
         if not os.path.exists(self.output):
             print("Couldn't write the header to path: %s" % self.output)
             return
-        # self.run(self.arch)
+        self.run(self.arch)
 
     def run(self, arch_type):
         # run not use class_dump

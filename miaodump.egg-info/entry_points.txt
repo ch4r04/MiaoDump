@@ -1,0 +1,3 @@
+[console_scripts]
+miaodump = miaodump.cli.miaodump_client:main
+
